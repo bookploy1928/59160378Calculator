@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+
+    
+    <body>
+        
+            <header>
+                    <h2>Calculator By Peeranut</h2>
+            </header>
+            
+                <article>                   
+                        <section>
+                            <br>
+                            <input class="text" type="text" id="firstNumber" placeholder="put firstNumber">
+                            <br>
+                            <br>
+                            <input class="text" type="text" id="secondNumber" placeholder="put secondNumber">              
+                            <br>
+                            <br>
+                            <button class="button1" id="sumButton" onclick="getSum()">+</button>
+                            <button class="button2" id="minusButton" onclick="getMinus()">-</button>
+                            <button class="button3" id="divideButton" onclick="getDivide()">x</button>
+                            <button class="button4" id="multiplyButton" onclick="getMultiply()">÷</button>
+                            <fontA><div id="output"></div></fontA>
+                        </section>
+                   
+                </article>
+                
+            
+        <script>
+            var firstNumber = document.getElementById("firstNumber");
+            var secondNumber = document.getElementById("secondNumber");
+            var output = document.getElementById("output");
+            function getSum(){
+                let sum = parseFloat(firstNumber.value)+parseFloat(secondNumber.value);
+                showResult(sum);
+            }
+            function getMinus(){
+                let minus = parseFloat(firstNumber.value)-parseFloat(secondNumber.value);
+                showResult(minus);
+            }
+            function getDivide(){
+                let divide = parseFloat(firstNumber.value)*parseFloat(secondNumber.value);
+                showResult(divide);
+            }
+            function getMultiply(){
+                let multiply = parseFloat(firstNumber.value)/parseFloat(secondNumber.value);
+                showResult(multiply);
+            }
+            function showResult(result){
+                output.innerHTML = "answer: "+result;
+            }
+        </script>
+    </body>
+
+</html>
+    
